@@ -6,7 +6,7 @@ description: >-
 
 # Sommaire
 
-Ce cours donne une introduction aux réseaux informatiques, tels que les réseaux LAN/WAN physiques \(ordinateurs, serveurs, équipement réseau\) ou les infrastructures virtualisées \(containers Docker interconnectés par un réseau virtualisé\)
+Ce cours donne une introduction aux réseaux informatiques, tels que les réseaux LAN/WAN physiques \(ordinateurs, serveurs, équipement réseau\) ou les infrastructures virtualisées \(containers Docker interconnectés par un réseau virtualisé\).
 
 ## Table des matières
 
