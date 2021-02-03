@@ -23,7 +23,7 @@ description: Les différentes topologies de réseaux
 
 ### **Topologie en étoile**
 
-![](../.gitbook/assets/image%20%2830%29.png)
+![](../.gitbook/assets/image%20%28104%29.png)
 
 * Chaque station est connecté à un nœud central
 * Le nœud central transmet les données reçues

@@ -186,7 +186,7 @@ L’utilisation de Slow Start après des pertes isolées n’est pas optimale
 * Diminuer la fenêtre à la moitié
 * Continuer avec Congestion Avoidance
 
-![Effet de fast recovery sur le d&#xE9;bit](../../.gitbook/assets/image%20%2866%29.png)
+![Effet de fast recovery sur le d&#xE9;bit](../../.gitbook/assets/image%20%28125%29.png)
 
 ## Résumé du contrôle de congestion
 

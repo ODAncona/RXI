@@ -19,7 +19,7 @@ description: Protocole de liaison dans un LAN
 * En Gb-Ethernet, 4 paires sont utilisés
 *  Longueur jusqu’à 100 m
 
-![](../.gitbook/assets/image%20%2844%29.png)
+![](../.gitbook/assets/image%20%2834%29%20%281%29.png)
 
 ### Croisement
 

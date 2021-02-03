@@ -44,5 +44,5 @@ Le système DNS de réaliser une méthode simple de répartition de charge
 * Toutes ces machines réalisent le même service \(par exemple serveurs Web pour un site donné\)
 * Le serveur DNS effectue une permutation des enregistrements à chaque requête DNS
 
-![Le serveur DNS envoie une fois BAC et l&apos;autre CAB](../.gitbook/assets/image%20%28129%29.png)
+![Le serveur DNS envoie une fois BAC et l&apos;autre CAB](../.gitbook/assets/image%20%28129%29%20%281%29.png)
 

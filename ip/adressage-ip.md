@@ -104,6 +104,7 @@ Selon la longueur du préfixe réseau, on distingue plusieurs classes d’adress
 | Broadcast local | 255.255.255.255 | Broadcast à l’intérieur d’un réseau |
 | Adresse du réseau | Préfixe réseau + tous les autres bits à 0 | Première adresse du réseau. Ne peut pas être assignée à une machine. |
 | Adresse broadcast d’un réseau | Préfixe réseau + tous les autres bits à 1 | Dernière adresse du réseau. Broadcast depuis l’extérieur. Ne peut pas être assignée à une machine. |
+| Adresse non définie | 0.0.0.0 | Adresse non définie, utilisée par un client DHCP avant l’attribution d’une adresse IP |
 
 On ne peut donc pas assigner l'adresse broadcast et l'adresse du réseau.
 
