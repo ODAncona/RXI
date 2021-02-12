@@ -22,11 +22,11 @@ marque introduite par la Wi-Fi Alliance qui teste la compatibilité et fait la p
 
 ## Normes principales
 
-![Les diff&#xE9;rentes normes wifi](../.gitbook/assets/image%20%2866%29.png)
+![Les diff&#xE9;rentes normes wifi](../.gitbook/assets/image%20%2890%29.png)
 
 ## Fréquences utilisées: micro-ondes
 
-![Le spectre &#xE9;lectromagn&#xE9;tique](../.gitbook/assets/image%20%2890%29.png)
+![Le spectre &#xE9;lectromagn&#xE9;tique](../.gitbook/assets/image%20%28115%29.png)
 
 * Les fréquences radio sont comprises entre 250Mhz - 70 Ghz
 * Les ondes se propagent en ligne droite
@@ -78,5 +78,49 @@ marque introduite par la Wi-Fi Alliance qui teste la compatibilité et fait la p
   * Espacement des canaux: 5 MHz, largeur des canaux: 22 MHz
 * Les canaux 1 – 6 – 11 sont les plus souvent utilisés
 
-![Canaux utilisables](../.gitbook/assets/image%20%2883%29.png)
+![Canaux utilisables](../.gitbook/assets/image%20%28100%29.png)
+
+## Exemple d'une transmission
+
+![Transmission Wi-Fi A -&amp;gt; AP -&amp;gt; B](../.gitbook/assets/image%20%2865%29.png)
+
+* Chaque trajet est acquitté
+* Puisque SIFS &lt; DIFS, l’acquittement est transmis avec priorité
+* Le point d’accès n’a pas de priorité \(Il est possible qu’une autre station gagne accès au canal avant lui\) 
+
+## Evitement de collision
+
+Défaut de CSMA simple : Lorsque plusieurs émetteurs attendent la libération du canal, il y aura forcement une collision
+
+### CSMA/CA \(Collision Avoidance\)
+
+#### Principe
+
+une station doit attendre un délai aléatoire :
+
+1. Si le canal est occupé lors de l’écoute \(=&gt; CSMA non persistant\) 
+2. Après une transmission réussie
+3. Après chaque retransmission \(=après une collision ou une erreur de bit\)
+
+#### Résultat
+
+* Evite les collisions quand le canal se libère
+* Empêche une station de monopoliser le canal
+* Toutes les stations ont la même priorité d’accéder au canal
+* Pas de Qualité de Service \(délais peuvent être longs\)
+
+#### Exemple
+
+![](../.gitbook/assets/image%20%2883%29.png)
+
+## Débit effectif
+
+Les normes indiquent le débit physique de transmission de bits
+
+* Par exemple 54 Mb/s pour 802.11g
+
+Le débit effectif est inférieur à cause
+
+* des en-têtes des trames
+* des délais d’attente \(DIFS, délais aléatoires, acquittements\)
 
