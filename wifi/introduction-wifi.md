@@ -22,11 +22,11 @@ marque introduite par la Wi-Fi Alliance qui teste la compatibilité et fait la p
 
 ## Normes principales
 
-![Les diff&#xE9;rentes normes wifi](../.gitbook/assets/image%20%2890%29.png)
+![Les diff&#xE9;rentes normes wifi](../.gitbook/assets/image%20%28115%29.png)
 
 ## Fréquences utilisées: micro-ondes
 
-![Le spectre &#xE9;lectromagn&#xE9;tique](../.gitbook/assets/image%20%28115%29.png)
+![Le spectre &#xE9;lectromagn&#xE9;tique](../.gitbook/assets/image%20%28139%29.png)
 
 * Les fréquences radio sont comprises entre 250Mhz - 70 Ghz
 * Les ondes se propagent en ligne droite
@@ -78,9 +78,44 @@ marque introduite par la Wi-Fi Alliance qui teste la compatibilité et fait la p
   * Espacement des canaux: 5 MHz, largeur des canaux: 22 MHz
 * Les canaux 1 – 6 – 11 sont les plus souvent utilisés
 
-![Canaux utilisables](../.gitbook/assets/image%20%28100%29.png)
+![Canaux utilisables](../.gitbook/assets/image%20%28138%29.png)
 
-## Exemple d'une transmission
+### 802.11n à 2.4 GHz
+
+* Utilisation avec 1 canal est similaire à 802.11b/g
+* Utilisation avec deux canaux double la largeur de bande et le débit nominal
+  * Les deux canaux doivent être séparés de 20 MHz
+  * Par exemple canaux 1+5 ou 6+10
+  * Un seul réseau 802.11n @2.4 GHz bloque 9 des 13 canaux
+
+![](../.gitbook/assets/image%20%2866%29.png)
+
+### 802.11a et 802.11n à 5 GHz
+
+* En Europe, 19 canaux sans interférences mutuelles
+* Largeur de bande de 20 MHz par canal
+* 802.11n peut utiliser un ou deux canaux
+
+![](../.gitbook/assets/image%20%28141%29.png)
+
+## Accès au médium
+
+* Le canal radio est partagé entre tous les émetteurs • Contrairement à un bus sur câble coaxial, la détection de collisions est difficile
+* CSMA/CD d’Ethernet n’est pas utilisable
+
+#### Principe de csma dans 802.11
+
+1. Un émetteur écoute le canal avant de transmettre
+2. Si le canal est libre pendant l’intervalle DIFS: transmission
+3. Si le canal est occupé: attendre un délai aléatoire
+
+   ➔ CSMA non persistant, contrairement à Ethernet
+
+4. Chaque trame doit être acquittée après chaque transmission
+
+   • Intervalle SIFS \(&lt; DIFS\) entre la réception de la trame et l’acquittement
+
+### Exemple d'une transmission
 
 ![Transmission Wi-Fi A -&amp;gt; AP -&amp;gt; B](../.gitbook/assets/image%20%2865%29.png)
 
@@ -111,7 +146,40 @@ une station doit attendre un délai aléatoire :
 
 #### Exemple
 
-![](../.gitbook/assets/image%20%2883%29.png)
+![](../.gitbook/assets/image%20%28100%29.png)
+
+### Faiblesse de CSMA/CA
+
+Collisions toujours possibles:
+
+* Les délais aléatoires de deux stations expirent simultanément
+* Problème de la station cachée
+
+![station cach&#xE9;e](../.gitbook/assets/image%20%2890%29.png)
+
+Mode RTS/CTS avec réservation du canal
+
+* Evite le problème de la station cachée
+* Réduit la durée d’une collision
+
+### Réservation avec RTS et CTS
+
+Message RTS \(Request to Send\)
+
+* Court message envoyé par la source pour indiquer l’intention d’émettre 
+
+Message CTS \(Clear to Send\)
+
+* Court message envoyé par la destination comme réponse au message RTS
+* Reçu par tous les nœuds dans la zone de couverture du point d’accès
+* Indique la durée de la réservation \(NAV, Network Allocation Vector\)
+
+Comportement
+
+* Réception d’un RTS: silence pendant la transmission de CTS + réservation
+* Réception de CTS: silence pendant la transmission suivante
+
+![](../.gitbook/assets/image%20%28140%29.png)
 
 ## Débit effectif
 
@@ -123,4 +191,11 @@ Le débit effectif est inférieur à cause
 
 * des en-têtes des trames
 * des délais d’attente \(DIFS, délais aléatoires, acquittements\)
+
+| Norme | Débit maximum de la couche physique | Débit effectif \(paquet de 64B\) | Débit effectif \(paquet de 1500B\) |
+| :--- | :--- | :--- | :--- |
+| 802.11b | 11 Mb/s | 0.8 Mb/s | 7.1 Mb/s |
+| 802.11g/a | 54 Mb7s | 1.3 Mb/s | 20 Mb/s |
+
+### 
 
